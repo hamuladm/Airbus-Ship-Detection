@@ -11,7 +11,7 @@ def rle_encode(img):
     runs[1::2] -= runs[::2]
     return ' '.join(str(x) for x in runs)
  
-def rle_decode(mask_rle, shape):
+def rle_decode(mask_rle, shape=(768,768)):
     '''
     mask_rle: run-length as string formated (start length)
     shape: (height,width) of array to return 
@@ -25,3 +25,7 @@ def rle_decode(mask_rle, shape):
     for lo, hi in zip(starts, ends):
         img[lo:hi] = 1
     return img.reshape(shape)
+
+
+if __name__ == '__main__':
+    print(rle_decode('458957 14 459725 14 460493 14 461261 14 462029 14 462797 14 463565 14'))
