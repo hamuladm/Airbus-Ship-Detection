@@ -323,3 +323,6 @@ pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,visualstudiocode,python,pycharm
 /airbus-ship-detection/
+.idea
+models/
+weights/
