@@ -26,7 +26,7 @@ def run_pred():
     rows = 1
     columns = 2
 
-    test_imgs = ['fddf484fe.jpg']
+    test_imgs = [random.choice(os.listdir(TEST_PATH)) for _ in range(5)]
     print(test_imgs)
     for i in range(len(test_imgs)):
         img, pred = gen_pred(test_imgs[i], model)
